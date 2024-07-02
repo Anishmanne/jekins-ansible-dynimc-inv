@@ -1,14 +1,14 @@
 provider "aws"{
-region = "ap-south-1"
+region ="ca-central-1"
 }
 
-
-resource "aws_instance" "AWSServer"{
-ami = "ami-02bb7d8191b50f4bb"
+resource "aws_instance" "AWSEC2"{
+ami = "ami-001843b876406202a"
 instance_type = "t2.micro"
-security_groups = ["launch-wizard-2"]
-key_name = "devopsmithuntechnologies"
+key_name= "pythontechnologies.pem"
+security_group = ["launch-wizard-2"]
 tags = {
-Name =  "tomcatservers"
+Name = "terraformserver"
 }
 }
+
